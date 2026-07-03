@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Population Growth — Continuous &amp; Discrete — Simulation</title>
+<link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+<div class="card" id="simbox">
+<div class="simbar"><span class="simbar-logo" aria-hidden="true"><img src="images\logo.svg" alt="Amrita Vishwa Vidyapeetham"></span><h1 class="simbar-title">Population Growth — Continuous &amp; Discrete</h1><button class="fs-btn" id="fsBtn" onclick="toggleFS()" title="Toggle full screen" aria-label="Toggle full screen">⛶</button></div>
+<div class="sim">
+<div class="controls">
+<label style="font-weight:600;font-size:.9rem;display:block;margin-bottom:6px">Model</label>
+<select class="dropBox" id="mode" onchange="run()">
+  <option value="cont">Continuous (exponential) — P = N₀·e^(rt)</option>
+  <option value="dis">Discrete (geometric) — P = N₀·Rᵗ</option>
+  <option value="both">Compare both</option>
+</select>
+<div class="field"><label>Initial population N₀ <span class="val" id="v_n0">50</span></label><input type="range" id="n0" min="1" max="500" value="50" oninput="sync()"></div>
+<div class="field"><label>Continuous growth rate r <span class="val" id="v_r">0.3</span></label><input type="range" id="r" min="0.01" max="1" step="0.01" value="0.3" oninput="sync()"></div>
+<div class="field"><label>Birth rate B (discrete) <span class="val" id="v_b">0.45</span></label><input type="range" id="b" min="0" max="1" step="0.01" value="0.45" oninput="sync()"></div>
+<div class="field"><label>Death rate D (discrete) <span class="val" id="v_d">0.1</span></label><input type="range" id="d" min="0" max="1" step="0.01" value="0.1" oninput="sync()"><div class="hint">Discrete growth factor R = 1 + (B − D).</div></div>
+<div class="field"><label>Time span <span class="val" id="v_t">30</span></label><input type="range" id="t" min="5" max="100" value="30" oninput="sync()"></div>
+<div class="field"><label>Number of steps <span class="val" id="v_steps">60</span></label><input type="range" id="steps" min="10" max="200" step="5" value="60" oninput="sync()"></div>
+<div class="btnrow">
+  <button class="btn btn-primary" onclick="run()">▶ Run</button>
+  <button class="btn btn-ghost" onclick="play()" id="playBtn">Play ▶</button>
+  <button class="btn btn-ghost" onclick="step()">Step ⏭</button>
+  <button class="btn btn-ghost" onclick="resetSim()">↺ Reset</button>
+</div>
+<div class="dl-label">Download</div>
+<div class="btnrow">
+  <button class="btn btn-accent" onclick="downloadPNG('population-growth.png')">⤓ PNG</button>
+  <button class="btn btn-accent" onclick="downloadCSV()">⤓ CSV</button>
+</div>
+</div>
+<div class="plotwrap">
+<canvas class="field" id="field" width="720" height="240"></canvas>
+<div class="counts" id="counts"></div>
+<div class="plot-title" id="plotTitle">Population size over time</div>
+<canvas class="chart" id="chart" width="720" height="400"></canvas>
+<div class="legend" id="legend"></div>
+<div class="readout">Cursor: X = <b id="rx">–</b>, Y = <b id="ry">–</b></div>
+</div>
+</div>
+</div>
+<div class="toast" id="toast"></div>
+<script src="./js/main.js"></script>
+<script src="../assets/js/iframeResize.js"></script>
+        
+        </body>
+</html>
