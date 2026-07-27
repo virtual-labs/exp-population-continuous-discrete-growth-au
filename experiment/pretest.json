@@ -1,37 +1,75 @@
+
 {
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "1.Population ecology deals with:",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Dynamics of species populations",
+        "b": "Growth rate of species population",
+        "c": "Death rate of species population",
+        "d": "None of the above."
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+ 
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },   
+
+
+    {
+      "question": "2. The species with no particular breeding season is called:",
+      "answers": {
+        "a": "Discontinuous growth",
+        "b": "Continuous growth",
+        "c": "Discrete growth",
+        "d": "None of the above."
       },
+      
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+
+
+    
+    {
+      "question": "3. What is the English name of Macaca silenus?",
+      "answers": {
+        "a": "Lion tailed monkey",
+        "b": "Black ape",
+        "c": "White ape",
+        "d": "Beard ape"
+      },
+      
       "correctAnswer": "a",
       "difficulty": "beginner"
     },
+
+
+ 
     {
-      "question": "This is a Sample Question 2?",
+      "question": "4. Initially there were 12 king cobras. After 3 years, the population was 33. Calculate the growth.",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "0.7",
+        "b": "7",
+        "c": "0.007",
+        "d": "0.07"
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+      
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+
+
+
+    {
+      "question": "5. Rate of the growth is calculated using the formula R=(Nt-No)/t where Nt and t refer to:",
+      "answers": {
+        "a": "Initial time and final time",
+        "b": "Initial population and final population",
+        "c": "Initial population and time",
+        "d": "All of the above."
       },
+     
       "correctAnswer": "c",
       "difficulty": "beginner"
     }
